@@ -1,0 +1,69 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Dikey eksende ortalamak için */
+  width: 100%;
+  max-width: 350px;
+  margin-top: 100px; /* LG boyutunda 100px, MD boyutunda 60px, SM boyutunda 50px boşluk */
+
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    margin-top: 60px; /* MD boyutunda 60px */
+  justify-content: center;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    margin-top: 50px; /* SM boyutunda 50px */
+    justify-content: center;
+ 
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    margin-top: 40px; /* XS boyutunda 40px */
+    justify-content: center;
+ 
+  }
+}
+
+@media (max-width: 375px) {
+  .card-container {
+    margin-top: 30px; /* Ekstra küçük cihazlar için 30px */
+    justify-content: center;
+ 
+  }
+}
+/* Card.css */
+.card-container {
+  margin: 0.5rem;
+  justify-content: center;
+
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+  justify-content: center;
+
+  }
+}
+
+@media (max-width: 1023px) {
+  .card-container {
+  justify-content: center;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    float: none;
+  justify-content: center;
+
+  }
+}

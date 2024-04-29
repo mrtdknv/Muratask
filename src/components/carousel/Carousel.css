@@ -1,0 +1,102 @@
+/* Carousel bileşeni için genel stil */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 50%; /* Carousel bileşeninin maksimum genişliği */
+  margin: 0 auto; /* Ortalama */
+}
+
+/* Carousel içeriği için stil */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Carousel elemanları için stil */
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 15px; /* Aralarda boşluk bırakmak için istediğiniz bir değer */
+}
+
+/* Son carousel elemanı için stil */
+.carousel-item:last-child {
+  margin-right: 0; /* Son elemanın sağında boşluk bırakmayacak */
+}
+
+/* Carousel resimleri için stil */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi tamamen sığdır */
+  border-radius: 5px; /* Resimlerin köşelerini yuvarlamak için istediğiniz bir değer */
+}
+
+/* Carousel noktaları için stil */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+/* Carousel noktaları için stil */
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #fff; /* Seçilmemiş noktaların rengi */
+  border-radius: 50%;
+  margin: 0 5px; /* Noktalar arasındaki boşluk */
+  cursor: pointer;
+}
+
+/* Aktif carousel noktası için stil */
+.carousel-indicator.active {
+  background-color: #007bff; /* Seçilmiş noktanın rengi */
+}
+
+/* Yarı genişlikte ortalanması */
+#default-carousel {
+  width: 70%; /* Yarı genişlikte */
+  margin: 0 auto; /* Ortalama */
+}
+
+/* Resimleri sığdırmak için */
+#default-carousel img {
+  width: 100%; /* Resmi tam genişlikte yap */
+  height: 100%; /* Resmi tam yükseklikte yap */
+  object-fit: cover; /* Resmi tamamen sığdır */
+}
+
+/* SM ekranları için genişlik ayarı */
+@media (max-width: 640px) {
+  #default-carousel {
+    width: 90%; /* SM ekranlar için %90 genişlik */
+  }
+  #default-carousel img {
+    height: 300px; /* SM ekranları için resim yüksekliği */
+  }
+}
+
+/* MD ekranları için genişlik ayarı */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #default-carousel {
+    width: 90%; /* MD ekranlar için %90 genişlik */
+  }
+  #default-carousel img {
+    height: 400px; /* MD ekranları için resim yüksekliği */
+  }
+}
+
+/* LG ekranları için genişlik ayarı */
+@media (min-width: 1025px) {
+  #default-carousel img {
+    height: 600px; /* LG ekranları için resim yüksekliği */
+  }
+}
+
+/* Butonların baskın görünmesi */
+[data-carousel-prev],
+[data-carousel-next] {
+  z-index: 40; /* Butonların z-index değeri */
+}

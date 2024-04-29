@@ -1,0 +1,13 @@
+/* Navbar'ı sabit tutmak için stil */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Diğer içeriklerin üzerine çıkması için */
+  }
+  
+  /* Sayfa içeriğini navbar'ın altına kaydırmak için stil */
+  main {
+    margin-top: 64px; /* Navbar'ın yüksekliği kadar boşluk bırak */
+    /* Diğer stiller... */
+  }
+  
