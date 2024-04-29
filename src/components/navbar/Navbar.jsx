@@ -14,7 +14,7 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  const [isOpen, setIsOpen] = useState(false); // Açılır menünün durumunu depolamak için state
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Disclosure as="nav" className="bg-black">
@@ -41,7 +41,7 @@ export default function Example() {
               <div className="sm:hidden">
                 <div
                   className={`${
-                    isOpen ? "block" : "hidden" // isOpen durumuna göre menüyü göster veya gizle
+                    isOpen ? "block" : "hidden"
                   } absolute inset-x-0 top-0 p-2 transition origin-top-right transform`}
                 >
                   <div className="bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
@@ -58,7 +58,7 @@ export default function Example() {
                       <div className="-mr-2">
                         <Disclosure.Button
                           className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                          onClick={() => setIsOpen(false)} // Menüyü kapat
+                          onClick={() => setIsOpen(false)}
                         >
                           <span className="sr-only">Close main menu</span>
                           <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -113,7 +113,6 @@ export default function Example() {
                   <span className="sr-only">View notifications</span>
                 </button>
 
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">

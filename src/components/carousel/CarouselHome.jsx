@@ -33,16 +33,14 @@ const CarouselHome = ({ movieData }) => {
     setCurrentIndex(newIndex);
   };
 
-  // topMovies var mı ve boş değil mi kontrolü
   if (!topMovies || topMovies.length === 0) {
-    return <div>No movies to display</div>; // veya istediğin bir loading mesajı veya bileşeni
+    return <div>No movies to display</div>;
   }
 
   return (
     <div className="relative w-full">
       {/* Carousel wrapper */}
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-        {/* Render each image dynamically */}
         {topMovies.map((movie, index) => (
           <div
             key={index}
@@ -51,15 +49,15 @@ const CarouselHome = ({ movieData }) => {
             } duration-700 ease-in-out`}
           >
             <img
-              src={movie.img} // Burada resimleri movie.img olarak çağırıyoruz
+              src={movie.img}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              style={{ maxWidth: "100%", maxHeight: "100%" }} // Resim boyutları
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
               alt={`Slide ${index + 1}`}
             />
           </div>
         ))}
       </div>
-      {/* Slider controls */}
+
       <button
         type="button"
         className="absolute top-0 start-0 z-40 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"

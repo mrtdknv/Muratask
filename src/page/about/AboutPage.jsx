@@ -55,6 +55,8 @@ function AboutPage() {
 
   const handleClearSearch = () => {
     setSearchTerm("");
+    setSortBy("");
+    setFilteredMovies([]);
   };
 
   // Tarihi en yüksek 8 filmi al
@@ -81,20 +83,20 @@ function AboutPage() {
             className="border border-gray-300 rounded-md px-4 py-2 shadow-lg shadow-slate-300 "
           >
             <option className="bg-slate-500" value="">
-              Sort by
+              Sırala
             </option>
             <option className="bg-slate-500" value="newest">
-              Newest
+              Yeni
             </option>
             <option className="bg-slate-500" value="oldest">
-              Oldest
+              Eski
             </option>
           </select>
           <button
             onClick={handleClearSearch}
             className="border border-gray-300 bg-slate-100 rounded-md px-4 py-2 shadow-lg shadow-slate-300 "
           >
-            Clear
+            Temizle
           </button>
         </div>
       </div>
